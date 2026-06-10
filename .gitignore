@@ -5,3 +5,5 @@ output/*
 .idea/
 
 *.log
+
+.DS_STORE
