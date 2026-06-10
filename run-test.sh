@@ -15,6 +15,15 @@ mkdir -p ${OUTPUTDIR}
 echo "Testing writing output product"
 python ${basedir}/test-output-product.py ${OUTPUTDIR}
 
+# Read the positional argument as defined in the algorithm registration here
+output_file=$1
+my_output_parameter=$2
+
+echo "maybe this is how to parse the outputs params:"
+echo $output_file
+echo my_output_parameter
+# meanwhile all inputs just get downloaded? idk!
+
 echo "Testing opening input file"
 python ${basedir}/test-input-file.py ${INPUT_FILE}
 
@@ -45,6 +54,9 @@ ls
 
 echo "ls /"
 ls /
+
+echo "ls *"
+ls *
 
 echo "aws s3 commands"
 # can I do this?

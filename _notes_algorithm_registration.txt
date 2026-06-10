@@ -1,0 +1,33 @@
+== NASA MAAP ==
+- follow instructions on https://docs.maap-project.org/en/latest/technical_tutorials/dps_tutorial/dps_tutorial_demo.html
+- here are notes for algorithm registration
+
+Repository URL:
+https://github.com/previtus/dps-unit-test.git
+
+Repository Branch:
+main
+
+Run Command:
+dps-unit-test/run-test.sh
+
+Build Command:
+dps-unit-test/run-build.sh
+
+General Information
+Algorithm Name: vitek_tutorial_v02
+Disk Space (GB): 1
+Resource Allocation: maap-dps-worker-8gb
+Container URL: mas.maap-project.org/root/maap-workspaces/2i2c/pangeo:v5.1.0
+                ( only two base variants there )
+
+Inputs/Outputs
+(hmm do these have to match th run file? or do they auto download any URL?)
+Inputs
+    input_file
+    my_input_parameter
+Outputs
+    output_file
+    my_output_parameter
+
+^ trying this ...
