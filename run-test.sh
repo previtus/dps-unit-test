@@ -16,16 +16,14 @@ echo "Testing writing output product"
 python ${basedir}/test-output-product.py ${OUTPUTDIR}
 
 # Read the positional argument as defined in the algorithm registration here
-output_file=$1
-my_output_parameter=$2
+my_output_parameter=$1
 
 echo "maybe this is how to parse the outputs params:"
-echo $output_file
-echo my_output_parameter
+echo $my_output_parameter
 # meanwhile all inputs just get downloaded? idk!
 
 echo "Testing opening input file"
-python ${basedir}/test-input-file.py ${INPUT_FILE}
+python ${basedir}/test-input-file.py --input_file ${INPUT_FILE} --my_output_parameter ${my_output_parameter}
 
 echo "PYTHON pip freeze"
 pip freeze

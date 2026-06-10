@@ -25,9 +25,7 @@ Inputs/Outputs
 (hmm do these have to match th run file? or do they auto download any URL?)
 Inputs
     input_file
-    my_input_parameter
 Outputs
-    output_file
     my_output_parameter
 
 ^ trying this ...
