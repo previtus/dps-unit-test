@@ -8,7 +8,7 @@ pip install -r ${basedir}/requirements.txt
 pip install -U "huggingface_hub[cli]"
 # ^ so this also probably worked!
 
-hf download previtus/JPL_TRACE_GASES_MODELS --local-dir ${basedir}/models/JPL_TRACE_GASES_MODELS
+hf download previtus/JPL_TRACE_GASES_MODELS --local-dir ${basedir}/daily-trace-gases/models/JPL_TRACE_GASES_MODELS
 # > should end up at "/app/dps-unit-test/models/JPL_TRACE_GASES_MODELS"
 # Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]
 # Warning: You are sending unauthenticated requests to the HF Hub.

@@ -13,6 +13,7 @@ parser.add_argument('-gas', help='Which trace gas? (options: ch4, nh3, no2 and c
 parser.add_argument('-tile', help='Which EMIT tile to run? (e.g. EMIT_L1B_RAD_001_20260102T143123_2600209_005)', default='EMIT_L1B_RAD_001_20260102T143123_2600209_005')
 parser.add_argument('-raws_folder', help='Folder to store intermediate files', default='./run_data/intermediates_folder')
 parser.add_argument('-results_folder', help='Folder to save results to', default='./run_data/results')
+parser.add_argument('-basedir', help='Location of this code', default='daily-trace-gases/')
 
 def detect_trace_gas(gas, tile_ID, results_folder, raws_folder):
     print("Running detection of", gas, "in EMIT tile:", tile_ID)
@@ -39,6 +40,14 @@ if __name__ == '__main__':
 
     tile_ID = args.tile
     gas = args.gas
+
+    basedir = args.basedir
+    from utils.paths import set_basedir
+    set_basedir(basedir)
+    print("basedir set to:", basedir)
+    from utils.paths import codebase_folder, models_storage
+    print("codebase_folder() returns:", codebase_folder())
+    print("models_storage() returns:", models_storage())
 
     results_folder = args.results_folder
     raws_folder = args.raws_folder
