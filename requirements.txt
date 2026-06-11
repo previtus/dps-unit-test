@@ -1,4 +1,3 @@
-segmentation-models-pytorch
 georeader-spaceml >= 1.5.0, <= 1.5.9
 omegaconf
 rasterio
@@ -14,8 +13,3 @@ pysolar
 GitPython
 scikit-image
 Pyarrow
-# (by default installs torch==2.12.0 for gpu)
-# try cpu only?
---index-url https://download.pytorch.org/whl/cpu
-torch
-torchvision

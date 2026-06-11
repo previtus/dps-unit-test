@@ -4,6 +4,7 @@ maap = MAAP()
 
 print(maap.secrets.get_secrets())
 
+import argparse
 import os
 YOUR_GOOGLE_EMAIL = maap.secrets.get_secret("mail_e")
 YOUR_GOOGLE_EMAIL_APP_PASSWORD = maap.secrets.get_secret("mail_p")
@@ -16,6 +17,9 @@ from email.mime.text import MIMEText
 from email.utils import formatdate
 from email import encoders
 COMMASPACE = ", "
+
+parser = argparse.ArgumentParser(description='Testing')
+parser.add_argument('-basedir', help='Location of this code', default='daily-trace-gases/')
 
 def mail_with_batsign(message_str = "", subject_str = ""):
     # curl --data $'Subject: Important notice\nHammer time!' https://batsign.me/at/kilgoret6@gmail.com/77975fc777
@@ -64,6 +68,18 @@ if __name__ == '__main__':
     send_mail("previtus@gmail.com", ["previtus@gmail.com"], "Testing mail",
               "foobar mail from maap", files=[])
 
+    args = parser.parse_args()
+    basedir = args.basedir
+    trying_path = os.path.join(args.basedir, "no2-prediction_scored.geojson")
+    print("trying path:", trying_path)
+    from pathlib import Path
+
+    file_path = Path(trying_path)
+    if file_path.is_file():
+        print("The file exists.")
+    else:
+        print("The file does not exist.")
+
     send_mail("previtus@gmail.com", ["previtus@gmail.com"], "Testing mail with attachment",
-              "foobar mail from maap", files=["no2-prediction_scored.geojson"])
+              "foobar mail from maap", files=[trying_path])
 

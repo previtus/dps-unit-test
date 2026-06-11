@@ -3,7 +3,10 @@
 basedir=$( cd "$(dirname "$0")" ; pwd -P )
 
 pip install -r ${basedir}/requirements.txt
-# ^ this does install loads of things ... (TODO: maybe select just a CPU only subset? Also from a smaller source container?)
+
+# cpu only torch? - trying this:
+pip install torch==2.12.0 torchvision --index-url https://download.pytorch.org/whl/cpu
+pip install -U segmentation-models-pytorch
 
 pip install -U "huggingface_hub[cli]"
 # ^ so this also probably worked!

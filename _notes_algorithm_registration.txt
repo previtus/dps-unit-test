@@ -26,8 +26,6 @@ Container URL: mas.maap-project.org/root/maap-workspaces/2i2c/pangeo:v5.1.0
 
 Inputs/Outputs
 (hmm do these have to match th run file? or do they auto download any URL?)
-Inputs
-    input_file
 Outputs
     emit_scene_name (e.g. EMIT_L1B_RAD_001_20231223T123029_2335708_008)
 
