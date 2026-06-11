@@ -19,6 +19,9 @@ python ${BASEDIR}/test-imports.py
 echo "Testing PYTHON vector codes"
 python ${BASEDIR}/test-vectors.py
 
+echo "Testing PYTHON vector codes 2"
+python ${BASEDIR}/test-vectors2.py
+
 echo "Testing PYTHON mailout codes"
 python ${BASEDIR}/test-mailout.py
 
