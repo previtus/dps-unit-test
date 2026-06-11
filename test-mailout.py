@@ -70,7 +70,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     basedir = args.basedir
-    trying_path = os.path.join(args.basedir, "no2-prediction_scored.geojson")
+    trying_path = os.path.join(basedir, "no2-prediction_scored.geojson")
     print("trying path:", trying_path)
     from pathlib import Path
 

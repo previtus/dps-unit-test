@@ -15,14 +15,10 @@ Build Command:
 dps-unit-test/run-build.sh
 
 General Information
-Algorithm Name: vitek_tutorial_v07
+Algorithm Name: vitek_tutorial_v08
 Disk Space (GB): 5
 Resource Allocation: maap-dps-worker-8gb
 Container URL: mas.maap-project.org/root/maap-workspaces/2i2c/pangeo:v5.1.0
-                ( pangeo has 8864 - build time 16 minutes / while maap_base 4907 - build time 14 minutes)
-                ( maap_base fails with ModuleNotFoundError: No module named 'osgeo' ! )
 
 Positional Inputs
     emit_scene_name (e.g. EMIT_L1B_RAD_001_20231223T123029_2335708_008)
-
-^ trying this ...
