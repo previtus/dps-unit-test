@@ -48,7 +48,7 @@ echo $GDAL_DATA
 
 # TODO: also try python mailing out
 
-#echo "PYTHON pip freeze"
-#pip freeze
-#echo "CONDA conda info --envs"
-#conda info --envs
+echo "PYTHON pip freeze"
+pip freeze
+echo "CONDA conda info --envs"
+conda info --envs
