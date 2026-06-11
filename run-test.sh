@@ -75,7 +75,24 @@ python ${basedir}/daily-trace-gases/detect_trace_gas.py -gas "ch4" -tile "EMIT_L
 #Downloading L1 data (RAD, OBS and mask) (... This might take some time!)
 #Enter your Earthdata Login username:
 
-echo "debug code directories..."
+echo "1st debug code directories..."
+echo "---"
+echo "ls daily-trace-gases/"
+ls ${basedir}/daily-trace-gases/
+echo "---"
+echo "ls daily-trace-gases/run_data"
+ls ${basedir}/daily-trace-gases/run_data
+echo "---"
+echo "ls daily-trace-gases/run_data/*"
+ls ${basedir}/daily-trace-gases/run_data/*
+
+
+# I hope this will use the downloaded example (and not hang on Earthdata login as before...)
+echo "Full code with tile name from parameter!"
+echo $1
+python ${basedir}/daily-trace-gases/detect_trace_gas.py -gas "ch4" -tile $1 -basedir ${basedir}/daily-trace-gases/
+
+echo "2nd debug code directories..."
 echo "---"
 echo "ls daily-trace-gases/"
 ls ${basedir}/daily-trace-gases/
