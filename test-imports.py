@@ -45,4 +45,21 @@ import torch
 print("About to import segmentation_models_pytorch")
 import segmentation_models_pytorch as smp
 
+
+print("About to import 'from osgeo import gdal'")
+try:
+    from osgeo import gdal
+except Exception as e:
+    print("exception!")
+    print(e)
+
+
+print("(Alt maybe try again with exporting GDAL_DATA?")
+try:
+    os.environ["GDAL_DATA"] = "/srv/conda/envs/notebook/share/gdal"
+    from osgeo import gdal  # Now it should import successfully
+except Exception as e:
+    print("exception!")
+    print(e)
+
 print("Passed all tested imports!")

@@ -22,3 +22,5 @@ pip install maap-py
 pip install gdown
 # ^ for our own s3 access independent demo...
 
+pip install fiona
+# ^ some errors with vector loading
