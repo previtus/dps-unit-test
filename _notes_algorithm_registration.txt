@@ -15,9 +15,9 @@ Build Command:
 dps-unit-test/run-build.sh
 
 General Information
-Algorithm Name: vitek_tutorial_v08
+Algorithm Name: vitek_tutorial_v09
 Disk Space (GB): 5
-Resource Allocation: maap-dps-worker-8gb
+Resource Allocation: maap-dps-worker-32gb
 Container URL: mas.maap-project.org/root/maap-workspaces/2i2c/pangeo:v5.1.0
 
 Positional Inputs
