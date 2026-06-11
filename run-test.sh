@@ -41,7 +41,7 @@ echo "---"
 
 
 echo "further debug for gdal ..."
-echi "ls /srv/conda/envs/notebook/share/gdal"
+echo "ls /srv/conda/envs/notebook/share/gdal"
 ls /srv/conda/envs/notebook/share/gdal
 echo "GDAL_DATA:"
 echo $GDAL_DATA
