@@ -101,23 +101,23 @@ ls ${basedir}/daily-trace-gases/run_data/*
 #echo "Testing PYTHON download"
 #python ${basedir}/test-download.py
 
-echo "Trying paths"
-echo "ls"
-ls
-#_context.json
-#_docker_params.json
-#_job.json
-#_pid
-#_run.sh
-#_stderr.txt
-#_stdout.txt
-#celeryconfig.py
-#datasets.json
-#input
-#output
-
-echo "ls /"
-ls /
+#echo "Trying paths"
+#echo "ls"
+#ls
+##_context.json
+##_docker_params.json
+##_job.json
+##_pid
+##_run.sh
+##_stderr.txt
+##_stdout.txt
+##celeryconfig.py
+##datasets.json
+##input
+##output
+#
+#echo "ls /"
+#ls /
 
 echo "ls *"
 ls *
@@ -128,17 +128,8 @@ ls *
 #write-output.txt
 
 
-#echo "aws s3 commands"
-# can I do this?
-#aws s3 cp s3://nasa-maap-data-store/file-staging/nasa-map/ESACCI_Biomass_L4_AGB_V4_100m_2020/S40E160_ESACCI-BIOMASS-L4-AGB-MERGED-100m-2020-fv4.0.tif .
-# ^ ... maybe this makes it slow btw ...
-# Completed 256.0 KiB/7.5 MiB (1.1 MiB/s) with 1 file(s) remaining
-# Completed 7.5 MiB/7.5 MiB (12.7 MiB/s) with 1 file(s) remaining
+# what about aws access like this?
+echo "tryin aws s3 ls EMITL2ARFL"
+aws s3 ls s3://lp-prod-protected/EMITL2ARFL.001/
 
-#aws s3 ls s3://nasa-maap-data-store/file-staging/nasa-map/
-# and what about the EMIT data? (we might get access denied - idk if we need some special credentials or to be at some special location (aws us-west-2 ? maybe ?)
-#aws s3 ls s3://lp-prod-protected/EMITL2ARFL.001/
-
-# TODO: also try maap secrets for getting earthaccess working
 # TODO: also try python mailing out
-# TODO: also try running my longer demo ...

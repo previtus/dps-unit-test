@@ -20,6 +20,9 @@ Disk Space (GB): 5
 Resource Allocation: maap-dps-worker-8gb
 Container URL: mas.maap-project.org/root/maap-workspaces/2i2c/pangeo:v5.1.0
                 ( only two base variants there )
+                ( pangeo has 8864 - build time 16 minutes / while maap_base 4907 - build time 14 minutes)
+                ( maap_base fails with ModuleNotFoundError: No module named 'osgeo' ! )
+                ( todo: adjust the versions in requirements.txt probably ... )
 
 Inputs/Outputs
 (hmm do these have to match th run file? or do they auto download any URL?)

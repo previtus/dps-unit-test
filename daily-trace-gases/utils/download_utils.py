@@ -1,6 +1,14 @@
+from maap.maap import MAAP
+import os
 import os.path
-
+maap = MAAP()
+os.environ["EARTHDATA_TOKEN"] = maap.secrets.get_secret("EARTHDATA_TOKEN")
 import earthaccess
+from timeit import default_timer as timer
+
+from earthaccess import download
+auth = earthaccess.login(strategy="environment", persist=True)
+
 from earthaccess import download
 # auth = earthaccess.login()
 # example: earthaccess.download(["https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BCH4ENH.002/EMIT_L2B_CH4ENH_002_20240616T072726_2416805_025/EMIT_L2B_CH4ENH_002_20240616T072726_2416805_025.tif"], local_path=".")
@@ -69,7 +77,7 @@ def download_granule(tile_name = "EMIT_L1B_RAD_001_20250529T024614_2514902_001",
             return True
 
     # Download only the missing ones:
-    auth = earthaccess.login(persist=True)
+    auth = earthaccess.login(strategy="environment", persist=True)
     downloaded_list = earthaccess.download(links_missing, local_path=local_path)
     print("Downloading done!")
 

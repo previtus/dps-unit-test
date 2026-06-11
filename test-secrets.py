@@ -4,7 +4,6 @@ from timeit import default_timer as timer
 maap = MAAP()
 
 print(maap.secrets.get_secrets())
-print(maap.secrets.get_secret("EARTHDATA_TOKEN"))
 # before ... maap.secrets.add_secret("EARTHDATA_TOKEN", "ABCD...")
 # [{'secret_name': 'foobar'}]
 # foobar_
