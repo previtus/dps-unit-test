@@ -15,8 +15,8 @@ Build Command:
 dps-unit-test/run-build.sh
 
 General Information
-Algorithm Name: vitek_tutorial_v02
-Disk Space (GB): 1
+Algorithm Name: vitek_tutorial_v04
+Disk Space (GB): 5
 Resource Allocation: maap-dps-worker-8gb
 Container URL: mas.maap-project.org/root/maap-workspaces/2i2c/pangeo:v5.1.0
                 ( only two base variants there )
@@ -26,6 +26,6 @@ Inputs/Outputs
 Inputs
     input_file
 Outputs
-    my_output_parameter
+    emit_scene_name (e.g. EMIT_L1B_RAD_001_20231223T123029_2335708_008)
 
 ^ trying this ...

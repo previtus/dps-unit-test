@@ -56,24 +56,18 @@ echo $PYTHONPATH
 export PYTHONPATH="$basedir/daily-trace-gases:$PYTHONPATH"
 echo $PYTHONPATH
 
-# download sample scene
-echo "making dir"
-mkdir ${basedir}/daily-trace-gases/run_data/intermediates_folder/EMIT_L1B_RAD_001_20260102T143123_2600209_005
-echo "downloading sample from gdown"
-gdown 1npZ8Q9mQPiE0I_2W2B1TcHspfTiODwom
-echo "unzipping"
-unzip EMIT_L1B_RAD_001_20260102T143123_2600209_005.zip -d ${basedir}/daily-trace-gases/run_data/intermediates_folder/EMIT_L1B_RAD_001_20260102T143123_2600209_005
-# Archive:  EMIT_L1B_RAD_001_20260102T143123_2600209_005.zip
+# download sample scene - would need to have rad, obs, mask and ch4enh to fully replace the download ...
+#echo "making dir"
+#mkdir ${basedir}/daily-trace-gases/run_data/intermediates_folder/EMIT_L1B_RAD_001_20260102T143123_2600209_005
+#echo "downloading sample from gdown"
+#gdown 1npZ8Q9mQPiE0I_2W2B1TcHspfTiODwom
+#echo "unzipping"
+#unzip EMIT_L1B_RAD_001_20260102T143123_2600209_005.zip -d ${basedir}/daily-trace-gases/run_data/intermediates_folder/EMIT_L1B_RAD_001_20260102T143123_2600209_005
+## Archive:  EMIT_L1B_RAD_001_20260102T143123_2600209_005.zip
 
-# I hope this will use the downloaded example (and not hang on Earthdata login as before...)
+# ======
 echo "Testing full code!"
 python ${basedir}/daily-trace-gases/detect_trace_gas.py -gas "ch4" -tile "EMIT_L1B_RAD_001_20260102T143123_2600209_005" -basedir ${basedir}/daily-trace-gases/
-#Testing full code!
-#Running detection of ch4 in EMIT tile: EMIT_L1B_RAD_001_20260102T143123_2600209_005
-#----------------------------------------
-#Step 1: getting data, computing WMF, RGB
-#Downloading L1 data (RAD, OBS and mask) (... This might take some time!)
-#Enter your Earthdata Login username:
 
 echo "1st debug code directories..."
 echo "---"
@@ -87,7 +81,7 @@ echo "ls daily-trace-gases/run_data/*"
 ls ${basedir}/daily-trace-gases/run_data/*
 
 
-# I hope this will use the downloaded example (and not hang on Earthdata login as before...)
+# ======
 echo "Full code with tile name from parameter!"
 echo $1
 python ${basedir}/daily-trace-gases/detect_trace_gas.py -gas "ch4" -tile $1 -basedir ${basedir}/daily-trace-gases/
