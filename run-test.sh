@@ -25,6 +25,9 @@ python ${BASEDIR}/test-mailout.py
 export PYTHONPATH="$BASEDIR/daily-trace-gases:$PYTHONPATH"
 
 # ======
+# before this it's at: /opt/conda/share/gdal - maybe that's wrong?
+export GDAL_DATA=/srv/conda/envs/notebook/share/gdal
+
 echo "Testing full run!"
 python ${BASEDIR}/daily-trace-gases/detect_trace_gas.py -gas "ch4" -tile $1 -basedir ${BASEDIR}/daily-trace-gases/ -results_folder ${OUTPUTDIR}
 
@@ -45,6 +48,8 @@ echo "ls /srv/conda/envs/notebook/share/gdal"
 ls /srv/conda/envs/notebook/share/gdal
 echo "GDAL_DATA:"
 echo $GDAL_DATA
+#GDAL_DATA:
+#/opt/conda/share/gdal
 
 # TODO: also try python mailing out
 

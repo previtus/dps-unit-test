@@ -4,6 +4,9 @@ basedir=$( cd "$(dirname "$0")" ; pwd -P )
 
 pip install -r ${basedir}/requirements.txt
 
+## does this need to be added extra?
+pip install pyogrio
+
 # cpu only torch? - trying this:
 pip install torch==2.12.0 torchvision --index-url https://download.pytorch.org/whl/cpu
 pip install -U segmentation-models-pytorch

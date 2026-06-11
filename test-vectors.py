@@ -18,7 +18,7 @@ ValueError: Found GDAL data directory at /srv/conda/envs/notebook/share/gdal but
 # (we have that) pip install pyarrow
 # (we added) pip install fiona
 
-vector_path = "no2-prediction_scored.geojson"
+vector_path = "daily-trace-gases/no2-prediction_scored.geojson"
 
 print(1)
 try:
